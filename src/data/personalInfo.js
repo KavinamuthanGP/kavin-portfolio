@@ -1,0 +1,21 @@
+export const personalInfo = {
+    name: "KAVINAMUTHAN G P",
+    fullName: "KAVINAMUTHAN G P",
+    role: "Computer Science Engineering Student",
+    university: "SRM Madurai College for Engineering and Technology",
+    degree: "B.E. in Computer Science and Engineering",
+    graduationYear: "2027",
+    yearOfStudy: "Final Year",
+    location: "Madurai, Tamil Nadu",
+    bio: "Final-year Computer Science Engineering student with experience across internships, personal projects, and open-source development. Curious about how software works beyond the classroom, I enjoy solving practical problems, collaborating on real-world projects, and continuously learning through hands-on development. Seeking an opportunity to contribute as a software engineer while growing within a strong development team.",
+    email: "kavinamuthan1@gmail.com",
+    githubUrl: "https://github.com/KavinamuthanGP",
+    linkedinUrl: "https://www.linkedin.com/in/kavinamuthan-g-p/",
+    resumeUrl: "/kavin-resume.pdf",
+    heroDescriptors: [
+        "Full-Stack Developer",
+        "React & Node.js",
+        "Open-source Contributor",
+        "Turning ideas into code",
+    ],
+};

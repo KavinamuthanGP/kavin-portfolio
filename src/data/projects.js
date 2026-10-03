@@ -1,0 +1,68 @@
+export const projects = [
+    {
+        id: "collexa",
+        name: "Collexa",
+        tagline: "Campus Event Platform (PWA)",
+        images: ["/images/projects/collexa-events.png", "/images/projects/collexa-admin.png"],
+        description: "Built a full-stack campus event platform with React, TypeScript, and Firebase, enabling students to discover events, register, and participate in teams while allowing admins to manage events and registrations.",
+        features: [
+            "Firebase Authentication",
+            "Role-based protected routes",
+            "Student and Admin workflows",
+            "Dedicated dashboards",
+            "Event-management capabilities"
+        ],
+        techStack: ["React", "TypeScript", "Firebase"],
+        githubUrl: "[PLACEHOLDER]",
+        liveUrl: "https://campus-connect-f1f29.web.app/",
+    },
+    {
+        id: "smartexpense",
+        name: "SmartExpense",
+        tagline: "Expense Tracker PWA",
+        images: ["/images/projects/smartexpense-dashboard.png"],
+        description: "Built an offline-first personal expense tracking PWA with React and TypeScript, supporting income and expense management, categorisation, and real-time balance tracking.",
+        features: [
+            "Service Workers",
+            "Web App Manifest",
+            "Responsive UI",
+            "Calendar-based event views",
+            "Real-time Firebase data",
+            "CRUD-based expense management",
+            "React Context API",
+            "localStorage persistence",
+            "Data import/export",
+            "Theme switching",
+            "PWA installation",
+            "Offline support",
+            "Interactive dashboards",
+            "Charts and monthly reports using Recharts"
+        ],
+        techStack: ["React", "TypeScript", "Recharts"],
+        githubUrl: "[PLACEHOLDER]",
+        liveUrl: "https://smart-expense-pwa.web.app/",
+    },
+    {
+        id: "internlog",
+        name: "InternLog",
+        tagline: "Career & Skill Tracker",
+        images: ["/images/projects/internlog-dashboard.png"],
+        description: "Built a career-tracking SPA for managing internship applications and skill development.",
+        features: [
+            "Internship management",
+            "Skill management",
+            "Category-based skill journaling",
+            "Proficiency tracking",
+            "Learning hours",
+            "Derived progress metrics",
+            "localStorage persistence",
+            "Defensive data handling",
+            "Profile editing",
+            "Legacy data migration",
+            "One-click JSON export"
+        ],
+        techStack: ["React", "TypeScript", "Tailwind CSS"],
+        githubUrl: "[PLACEHOLDER]",
+        liveUrl: "https://internlog-coral.vercel.app/",
+    }
+];
