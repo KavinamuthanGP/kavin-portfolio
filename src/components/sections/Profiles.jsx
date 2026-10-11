@@ -37,9 +37,20 @@ function HackerRankIcon(props) {
     );
 }
 
+function LinkedinIcon(props) {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width={props.size || 24} height={props.size || 24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect width="4" height="12" x="2" y="9" />
+            <circle cx="4" cy="4" r="2" />
+        </svg>
+    );
+}
+
 const getPlatformIcon = (iconName) => {
     switch (iconName) {
         case 'github': return <GithubIcon size={28} />;
+        case 'linkedin': return <LinkedinIcon size={28} />;
         case 'code': return <LeetCodeIcon size={28} />;
         case 'terminal': return <HackerRankIcon size={28} />;
         default: return <ExternalLink size={28} />;
@@ -73,23 +84,23 @@ export default function Profiles() {
                 <motion.div className="profiles-grid" variants={stagger}>
                     {codingProfiles.map((profile) => {
                         const isPlaceholder = profile.url.includes('PLACEHOLDER');
-                        const isSpecial = profile.platform === 'GitHub' || profile.platform === 'LinkedIn';
                         return (
                             <motion.a
                                 key={profile.id}
                                 href={isPlaceholder ? '#' : profile.url}
                                 target={isPlaceholder ? '_self' : '_blank'}
                                 rel="noopener noreferrer"
-                                className={`profile-card ${isPlaceholder ? 'pointer-events-none opacity-60' : ''} ${isSpecial ? 'border-2 border-[var(--border-light)] shadow-lg hover:border-[var(--accent)] font-bold' : ''}`}
+                                className={`profile-card ${isPlaceholder ? 'pointer-events-none opacity-60' : ''} border-2 border-[var(--border-light)] shadow-lg hover:border-[var(--accent)] font-bold`}
                                 variants={fadeUp}
                                 whileHover={!isPlaceholder ? { y: -4, transition: { duration: 0.2 } } : {}}
+                                aria-label={`${profile.platform} profile: ${profile.username}`}
                             >
-                                <div className={`profile-icon ${isSpecial ? 'text-[var(--accent)] bg-[var(--accent)]/5' : ''}`}>
+                                <div className="profile-icon text-[var(--accent)] bg-[var(--accent)]/5">
                                     {getPlatformIcon(profile.icon)}
                                 </div>
                                 <div className="profile-info">
-                                    <h3 className={`profile-platform ${isSpecial ? 'text-xl' : ''}`}>{profile.platform}</h3>
-                                    <span className={`profile-username ${isSpecial ? 'opacity-90' : ''}`}>
+                                    <h3 className="profile-platform text-xl">{profile.platform}</h3>
+                                    <span className="profile-username opacity-90">
                                         {profile.username === '[PLACEHOLDER]' ? 'Coming soon' : profile.username}
                                     </span>
                                 </div>

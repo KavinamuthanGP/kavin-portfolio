@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { personalInfo } from '../../data/personalInfo';
-import { Mail, Send } from 'lucide-react';
+import { Mail, Phone, Send } from 'lucide-react';
 
 const fadeUp = {
     hidden: { opacity: 0, y: 30 },
@@ -92,7 +92,7 @@ export default function Contact() {
                         <p className="contact-links-text">I'm currently looking for internships and new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
 
                         <div className="contact-socials">
-                            <a href={personalInfo.email.includes('PLACEHOLDER') ? '#' : `mailto:${personalInfo.email}`} className="contact-social-link">
+                            <a href={personalInfo.email.includes('PLACEHOLDER') ? '#' : `mailto:${personalInfo.email}`} className="contact-social-link" aria-label={`Email ${personalInfo.email}`}>
                                 <div className="contact-social-icon"><Mail size={20} /></div>
                                 <div className="contact-social-details">
                                     <span className="contact-social-label">Email</span>
@@ -100,7 +100,17 @@ export default function Contact() {
                                 </div>
                             </a>
 
-                            <a href={personalInfo.linkedinUrl.includes('PLACEHOLDER') ? '#' : personalInfo.linkedinUrl} target="_blank" rel="noopener noreferrer" className="contact-social-link">
+                            {personalInfo.phone && (
+                                <a href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`} className="contact-social-link" aria-label={`Call ${personalInfo.phone}`}>
+                                    <div className="contact-social-icon"><Phone size={20} /></div>
+                                    <div className="contact-social-details">
+                                        <span className="contact-social-label">Phone</span>
+                                        <span className="contact-social-value">{personalInfo.phone}</span>
+                                    </div>
+                                </a>
+                            )}
+
+                            <a href={personalInfo.linkedinUrl.includes('PLACEHOLDER') ? '#' : personalInfo.linkedinUrl} target="_blank" rel="noopener noreferrer" className="contact-social-link" aria-label="LinkedIn profile">
                                 <div className="contact-social-icon"><LinkedinIcon size={20} /></div>
                                 <div className="contact-social-details">
                                     <span className="contact-social-label">LinkedIn</span>
@@ -108,7 +118,7 @@ export default function Contact() {
                                 </div>
                             </a>
 
-                            <a href={personalInfo.githubUrl.includes('PLACEHOLDER') ? '#' : personalInfo.githubUrl} target="_blank" rel="noopener noreferrer" className="contact-social-link">
+                            <a href={personalInfo.githubUrl.includes('PLACEHOLDER') ? '#' : personalInfo.githubUrl} target="_blank" rel="noopener noreferrer" className="contact-social-link" aria-label="GitHub profile">
                                 <div className="contact-social-icon"><GithubIcon size={20} /></div>
                                 <div className="contact-social-details">
                                     <span className="contact-social-label">GitHub</span>

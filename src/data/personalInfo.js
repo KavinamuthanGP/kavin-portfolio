@@ -9,8 +9,9 @@ export const personalInfo = {
     location: "Madurai, Tamil Nadu",
     bio: "Final-year Computer Science Engineering student with experience across internships, personal projects, and open-source development. Curious about how software works beyond the classroom, I enjoy solving practical problems, collaborating on real-world projects, and continuously learning through hands-on development. Seeking an opportunity to contribute as a software engineer while growing within a strong development team.",
     email: "kavinamuthan1@gmail.com",
+    phone: "+91 6374309238",
     githubUrl: "https://github.com/KavinamuthanGP",
-    linkedinUrl: "https://www.linkedin.com/in/kavinamuthan-g-p/",
+    linkedinUrl: "https://www.linkedin.com/in/kavinamuthan-g-p-b699b0291/",
     resumeUrl: "/kavin-resume.pdf",
     heroDescriptors: [
         "Full-Stack Developer",

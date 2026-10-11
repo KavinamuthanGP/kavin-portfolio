@@ -101,7 +101,7 @@ export default function Certifications() {
                             <div className="flex flex-col gap-3 flex-1">
                                 <span className="font-mono text-xs uppercase tracking-widest text-[var(--accent)] font-bold flex items-center gap-2">
                                     <Shield size={14} />
-                                    Featured Credential
+                                    Featured Credential • Completed
                                 </span>
                                 <h4 className="font-display font-black text-[clamp(1.5rem,2.5vw,2rem)] text-[var(--text-primary)] leading-tight uppercase tracking-tight">
                                     {featuredCert.name}
@@ -127,7 +127,7 @@ export default function Certifications() {
                 )}
 
                 {/* Secondary Certifications */}
-                <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-5" variants={staggerContainer}>
+                <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" variants={staggerContainer}>
                     {secondaryCerts.map((cert) => (
                         <motion.div
                             key={cert.id}
@@ -146,7 +146,7 @@ export default function Certifications() {
 
                             <div className="flex items-center justify-between mt-auto pt-4 border-t border-[var(--border)]">
                                 <span className="font-mono text-xs tracking-widest font-semibold text-[var(--text-muted)] uppercase">
-                                    {cert.date ? `Issued ${cert.date}` : 'Credential'}
+                                    {cert.date ? `Issued ${cert.date}` : (cert.status || 'Completed')}
                                 </span>
                                 {cert.credentialUrl && (
                                     <a

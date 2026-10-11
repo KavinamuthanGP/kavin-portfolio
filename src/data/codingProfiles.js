@@ -7,6 +7,13 @@ export const codingProfiles = [
         icon: "github",
     },
     {
+        id: "linkedin",
+        platform: "LinkedIn",
+        username: "Kavinamuthan G P",
+        url: "https://www.linkedin.com/in/kavinamuthan-g-p-b699b0291/",
+        icon: "linkedin",
+    },
+    {
         id: "leetcode",
         platform: "LeetCode",
         username: "KAVINAMUTHAN",
